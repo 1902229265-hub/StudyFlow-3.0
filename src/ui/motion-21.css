@@ -1,0 +1,207 @@
+/* 2.3 shared micro-interaction tokens. Geometry, typography and palette stay in the baseline stylesheets. */
+:root {
+  --motion-fast: 140ms;
+  --motion-normal: 220ms;
+  --motion-emphasis: 520ms;
+  --motion-confirm: 140ms;
+  --motion-exit: 120ms;
+  --motion-reduced: 80ms;
+  --motion-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+.focus-action[data-feedback-state="confirmed"] {
+  background: var(--v2-progress);
+  border-color: var(--v2-progress);
+  color: var(--v2-stage);
+  opacity: 1;
+  cursor: default;
+}
+.focus-action svg {
+  transform-origin: center;
+}
+.focus-stage {
+  transition: border-color var(--motion-fast) var(--motion-ease);
+}
+.focus-stage[data-motion-phase="confirming"] {
+  border-color: var(--v2-progress);
+}
+.load-track {
+  position: relative;
+}
+.load-track > i,
+.load-completed-bar {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  border-radius: inherit;
+  transform-origin: 50% 100%;
+}
+.load-completed-bar {
+  background: var(--v2-progress);
+  pointer-events: none;
+  transition:
+    transform var(--motion-normal) var(--motion-ease),
+    opacity var(--motion-fast) var(--motion-ease);
+}
+.load-chart .load-day {
+  transition: background-color var(--motion-normal) var(--motion-ease);
+}
+.load-chart .load-day[aria-pressed="true"] {
+  background: var(--v2-wash);
+  box-shadow: inset 0 -2px var(--v2-action);
+}
+.load-chart .load-day[aria-pressed="false"] .load-track > i {
+  opacity: 0.52;
+}
+.load-chart .load-day[aria-pressed="false"] .load-completed-bar {
+  opacity: 0.65;
+}
+.load-chart
+  .load-day[aria-pressed="false"]:is(:hover, :focus-visible, [data-tip-pinned])
+  .load-track
+  > i,
+.load-chart
+  .load-day[aria-pressed="false"]:is(:hover, :focus-visible, [data-tip-pinned])
+  .load-completed-bar {
+  opacity: 0.85;
+}
+.load-day[aria-pressed="true"] .load-label {
+  color: var(--v2-action);
+}
+
+.motion-ghost {
+  pointer-events: none !important;
+  user-select: none;
+}
+.motion-ghost * {
+  pointer-events: none !important;
+}
+.progress-orbit[data-motion-progress] .orbit-piece {
+  stroke: #706a84;
+}
+.orbit-tween-fill {
+  stroke: var(--v2-progress);
+  stroke-width: 7;
+  stroke-linecap: round;
+}
+.v2-calendar .week-day[aria-pressed="true"] {
+  box-shadow: inset 0 -2px var(--v2-action);
+}
+.v2-calendar .week-day {
+  transition:
+    background-color var(--motion-normal) var(--motion-ease),
+    border-color var(--motion-normal) var(--motion-ease),
+    color var(--motion-normal) var(--motion-ease);
+}
+.load-track > i {
+  transition:
+    transform var(--motion-normal) var(--motion-ease),
+    background-color var(--motion-fast) var(--motion-ease),
+    opacity var(--motion-fast) var(--motion-ease);
+}
+.load-day:is(:hover, :focus-visible, [data-tip-pinned]) .load-track > i {
+  background: var(--v2-action);
+}
+.load-day[data-tip-pinned] {
+  background: var(--v2-wash);
+}
+.load-tip {
+  transform: translateX(-50%);
+  transition: opacity var(--motion-fast) var(--motion-ease);
+}
+.load-day:first-child .load-tip,
+.load-day:last-child .load-tip {
+  transform: translateX(0);
+}
+.load-day:is(:hover, :focus-visible, [data-tip-pinned]) .load-tip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%);
+}
+.load-day:first-child:is(:hover, :focus-visible, [data-tip-pinned]) .load-tip,
+.load-day:last-child:is(:hover, :focus-visible, [data-tip-pinned]) .load-tip {
+  transform: translateX(0);
+}
+.load-chart .load-day[data-tip-dismissed] .load-tip {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+#task-inspector {
+  transform-origin: 50% 45%;
+}
+#task-inspector::backdrop {
+  background: transparent;
+  transition: background-color var(--motion-fast) var(--motion-ease);
+}
+#task-inspector.is-presented::backdrop {
+  background: var(--overlay);
+}
+#task-inspector.is-closing {
+  pointer-events: none;
+}
+#task-inspector .dialog-header h2 {
+  font-size: 22px;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+#task-inspector .inspector-status {
+  color: var(--v2-action);
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+#task-inspector .inspector-meta dt {
+  color: var(--secondary);
+  font-size: 13px;
+}
+#task-inspector .inspector-meta dd {
+  font-size: 14px;
+  font-weight: 500;
+}
+#task-inspector .inspector-notes h3 {
+  color: var(--secondary);
+  font-size: 12px;
+  font-weight: 500;
+}
+#task-inspector .inspector-notes p {
+  font-size: 14px;
+  line-height: 1.85;
+}
+#task-inspector .dialog-footer .primary {
+  background: var(--v2-action);
+  border-color: var(--v2-action);
+  color: var(--canvas);
+}
+@media (max-width: 363px) {
+  .load-day:nth-child(4) .load-tip,
+  .load-day:nth-child(5) .load-tip,
+  .load-day:nth-child(4):is(:hover, :focus-visible, [data-tip-pinned])
+    .load-tip,
+  .load-day:nth-child(5):is(:hover, :focus-visible, [data-tip-pinned])
+    .load-tip {
+    transform: translateX(0);
+  }
+}
+.load-chart .load-day:not([data-tip-active]) .load-tip {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .load-track > i,
+  .load-completed-bar {
+    transition-property: background-color, opacity;
+  }
+  .v2-calendar .week-day,
+  .load-day,
+  .load-track > i,
+  .load-completed-bar,
+  .focus-action,
+  .focus-stage,
+  .load-tip,
+  #task-inspector::backdrop {
+    transition-duration: var(--motion-reduced);
+  }
+}

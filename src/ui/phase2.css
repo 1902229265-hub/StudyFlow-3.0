@@ -1,0 +1,529 @@
+/* Phase 2 extensions only. The four 2.3 authority sheets remain intact. */
+:root {
+  --mini-reserve: 0px;
+}
+html.theme-switching .phase2-app * {
+  transition-property: none !important;
+}
+.phase2-app .timer-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid #625a76;
+}
+.timer-main-copy {
+  min-block-size: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+.timer-plan,
+.timer-state {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: var(--v2-onstage);
+}
+.timer-plan svg {
+  width: 15px;
+  height: 15px;
+}
+.timer-subcopy,
+.timer-other {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--v2-stage-muted);
+}
+.timer-other {
+  margin-top: 3px;
+  max-width: 55ch;
+  overflow-wrap: anywhere;
+}
+.timer-digits {
+  font-size: 30px;
+  font-weight: 550;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.timer-state i {
+  width: 6px;
+  height: 6px;
+  display: block;
+  border-radius: 50%;
+  background: var(--v2-stage-muted);
+}
+.timer-state i.is-running {
+  background: var(--v2-progress);
+}
+.timer-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 44px;
+  padding: 10px 15px;
+  border: 1px solid #8b829b;
+  border-radius: 7px;
+  font-size: 13px;
+  color: var(--v2-onstage);
+  white-space: nowrap;
+  transition:
+    background-color var(--motion-fast) var(--motion-ease),
+    border-color var(--motion-fast) var(--motion-ease);
+}
+.timer-button:hover:not(:disabled) {
+  background: #ffffff18;
+  border-color: #c8c0db;
+}
+.timer-button:disabled {
+  opacity: 0.6;
+}
+.timer-start {
+  background: var(--v2-progress);
+  border-color: var(--v2-progress);
+  color: #24392d;
+}
+.timer-start:hover:not(:disabled) {
+  background: #c7ead5;
+  border-color: #c7ead5;
+}
+.timer-button svg {
+  width: 16px;
+  height: 16px;
+}
+.timer-actions {
+  display: flex;
+  gap: 8px;
+}
+.actual-mobile {
+  display: none;
+}
+.actual-stats .aside-heading {
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.actual-stats .aside-heading > span {
+  color: var(--muted);
+  font-size: 12px;
+}
+.actual-numbers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 12px;
+  margin: 18px 0 14px;
+  font-variant-numeric: tabular-nums;
+}
+.actual-numbers dt {
+  color: var(--muted);
+  font-size: 12px;
+}
+.actual-numbers dd {
+  margin: 5px 0 0;
+  font-size: 16px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+.actual-numbers > div:first-child dd {
+  color: var(--v2-action);
+  font-size: 21px;
+}
+.actual-numbers dd small {
+  font-size: 12px;
+  font-weight: 400;
+}
+.actual-stats .caption {
+  margin-bottom: 18px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.orbit-piece {
+  transition: stroke var(--motion-emphasis) var(--motion-ease);
+}
+.sidebar-mini {
+  padding: 12px 10px;
+  margin-bottom: 14px;
+  border: 1px solid var(--line-strong);
+  background: var(--canvas);
+  border-radius: 8px;
+}
+.mini-state {
+  color: var(--v2-action);
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.mini-title {
+  display: block;
+  font-size: 12px;
+  line-height: 1.65;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+.sidebar-mini .timer-digits {
+  display: block;
+  margin-top: 9px;
+  font-size: 22px;
+  letter-spacing: 0.8px;
+}
+.mini-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.sidebar-mini .mini-controls {
+  margin-top: 8px;
+}
+.mini-controls .icon-button {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+.mini-controls .icon-button:hover {
+  background: var(--v2-wash);
+  color: var(--v2-action);
+}
+.mini-panel > .text-action {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+}
+.mobile-mini {
+  display: none;
+}
+.service-alert {
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  background: var(--warn-soft);
+  border: 1px solid var(--danger);
+  border-radius: 7px;
+  font-size: 13px;
+}
+.service-alert p {
+  margin-top: 5px;
+  overflow-wrap: anywhere;
+}
+.service-alert .button {
+  margin-top: 10px;
+}
+.read-only-note {
+  color: var(--warn);
+  padding: 10px 0;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+}
+.toast.is-error {
+  border-color: var(--danger);
+}
+.dialog.is-presented::backdrop {
+  background: var(--overlay);
+}
+.dialog .phase2-editor {
+  padding: 0;
+}
+.phase2-editor input,
+.phase2-editor select,
+.phase2-editor textarea,
+#global-search {
+  min-height: 44px;
+}
+.phase2-editor .button.primary,
+.dialog .button.primary {
+  background: var(--v2-action);
+  border-color: var(--v2-action);
+  color: var(--canvas);
+}
+.dialog .button:disabled {
+  opacity: 0.65;
+}
+.dialog .dialog-header .icon-button {
+  min-width: 44px;
+  min-height: 44px;
+}
+.session-history {
+  border-top: 1px solid var(--line);
+  margin-top: 22px;
+  padding-top: 18px;
+}
+.session-history > p {
+  font-size: 13px;
+  margin-top: 10px;
+}
+.session-record {
+  margin-top: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.session-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+.session-heading strong {
+  font-size: 12px;
+  font-weight: 500;
+}
+.session-heading > span {
+  color: var(--v2-action);
+}
+.session-trace {
+  padding-left: 20px;
+  margin: 10px 0 0;
+  color: var(--secondary);
+}
+.session-trace li {
+  margin-top: 7px;
+  line-height: 1.75;
+}
+.trace-pause {
+  display: block;
+}
+.inspector-start {
+  margin-top: 12px;
+}
+.switch-copy,
+.recovery-copy {
+  font-size: 14px;
+  line-height: 1.85;
+  margin-top: 14px;
+  overflow-wrap: anywhere;
+}
+.phase3-shell {
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+.phase3-shell p {
+  margin-top: 12px;
+  color: var(--secondary);
+}
+.phase3-shell .button {
+  margin-top: 22px;
+}
+.search-results {
+  max-height: 45dvh;
+  overflow: auto;
+  margin-top: 14px;
+}
+.search-results > button {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  text-align: left;
+  padding: 12px 8px;
+  border-bottom: 1px solid var(--line);
+  min-height: 60px;
+}
+.search-results > button:hover {
+  background: var(--v2-wash);
+}
+.search-results strong {
+  font-size: 13px;
+  font-weight: 500;
+}
+.search-results span {
+  font-size: 12px;
+  color: var(--muted);
+}
+.phase2-motion-ghost {
+  pointer-events: none !important;
+  user-select: none;
+}
+@media (max-width: 760px) {
+  .phase2-app .workspace {
+    padding-bottom: calc(
+      24px + var(--mini-reserve) + env(safe-area-inset-bottom, 0px)
+    );
+  }
+  .phase2-app .timer-main {
+    gap: 14px;
+    align-items: center;
+    margin-top: 18px;
+    padding-top: 16px;
+  }
+  .timer-main-copy { min-block-size: 104px; }
+  .timer-plan {
+    font-size: 12px;
+    flex-wrap: wrap;
+  }
+  .timer-button {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+  .timer-subcopy {
+    font-size: 11px;
+  }
+  .timer-main.has-session {
+    align-items: center;
+  }
+  .timer-actions {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .timer-digits {
+    font-size: 26px;
+  }
+  .actual-mobile {
+    display: block;
+    margin-top: 18px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--line);
+  }
+  .actual-mobile .aside-heading h2 {
+    font-size: 14px;
+  }
+  .actual-mobile .actual-numbers {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    margin: 10px 0;
+  }
+  .actual-mobile .actual-numbers dd,
+  .actual-mobile .actual-numbers > div:first-child dd {
+    font-size: 15px;
+  }
+  .actual-mobile .actual-numbers dt {
+    font-size: 11px;
+  }
+  .actual-mobile .caption {
+    margin-bottom: 12px;
+    font-size: 11px;
+  }
+  .actual-desktop {
+    display: none;
+  }
+  .phase2-app .v2-balance .week-load {
+    border-top: 0;
+    padding-top: 0;
+  }
+  .mobile-mini {
+    position: fixed;
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 35;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+    border-top: 1px solid var(--line-strong);
+    background: var(--canvas);
+    box-shadow: 0 -6px 24px -12px #171b2440;
+  }
+  .mobile-mini .mini-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .mini-summary {
+    position: relative;
+    min-width: 0;
+    flex: 1;
+  }
+  .mini-expand {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    min-width: 0;
+    text-align: left;
+    padding: 0 0 23px;
+  }
+  .mini-summary .mini-time {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  .mobile-mini .mini-title {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 12px;
+  }
+  .mini-time {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 4px;
+  }
+  .mobile-mini .timer-digits {
+    font-size: 19px;
+  }
+  .mini-time small {
+    font-size: 11px;
+    color: var(--v2-action);
+  }
+  .mobile-mini .mini-panel {
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .mobile-mini .mini-panel > .caption {
+    flex-basis: 100%;
+    font-size: 12px;
+  }
+  .mobile-mini .mini-panel > .text-action {
+    margin-left: auto;
+  }
+  body:has(.mobile-mini) .toast {
+    bottom: calc(var(--mini-reserve) + env(safe-area-inset-bottom, 0px) + 12px);
+  }
+  .task-row .icon-button,
+  .task-row .task-toggle {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .dialog {
+    max-height: calc(100dvh - 24px - env(safe-area-inset-bottom, 0px));
+  }
+  .dialog .dialog-footer {
+    flex-wrap: wrap;
+  }
+  .dialog .dialog-footer .form-note {
+    flex-basis: 100%;
+  }
+}
+@media (max-width: 363px) {
+  .phase2-app .timer-main {
+    flex-direction: row;
+  }
+  .timer-main-copy { min-block-size: 140px; }
+  .timer-main > .timer-button {
+    width: auto;
+  }
+  .timer-main.has-session {
+    flex-direction: row;
+    align-items: center;
+  }
+  .timer-actions {
+    flex-direction: column;
+  }
+  .actual-mobile .actual-numbers {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .orbit-piece {
+    transition-duration: 80ms;
+  }
+  .timer-button,
+  .mini-controls .icon-button {
+    transition-duration: 80ms;
+  }
+}
