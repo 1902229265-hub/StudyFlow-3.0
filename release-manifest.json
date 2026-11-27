@@ -1,0 +1,345 @@
+{
+  "schema": 1,
+  "createdAt": "2026-11-13T16:27:25.896571+08:00",
+  "status": "PHASE2_DELIVERED_PAUSED_FOR_USER_ACCEPTANCE",
+  "scope": "Independent Today timer only; no phase3 or production migration",
+  "canonicalUrl": "http://127.0.0.1:5183/",
+  "source": {
+    "src/App.tsx": "00557abee48238ce5fab9b0f10545551703912b93e02f3470e5d8f764b4456d4",
+    "src/core/index.ts": "df737379eb28855f684e306aa522f705a6c5622455f86964a0ab97852e0c5c78",
+    "src/core/storage.ts": "c8670aba63ca72bdecc29816c5ab240d7538c1a3bf371b32075c2ad57e2c2c07",
+    "src/core/types.ts": "6f602c3e5b752276c4ccc1efa69f069530d911b8b90b5d048fcacd63d58c485b",
+    "src/main.tsx": "0ba593acefd9aa592c6a392e8bacd718a431d14de4569ae2106828706c2b8a85",
+    "src/seed.ts": "baf883cc7086046f7dad3c626284711a08343efdcd97d26b1cf7ac925866efc6",
+    "src/ui/Dialogs.tsx": "42f56479fec2a0afd5ebf8df1dbd7c978049165310902889b7e4e48fdbf2d182",
+    "src/ui/Icon.tsx": "55cae711fbc83e2fac92f1e28f77f8e971c8e17438c10474d475654149c955fd",
+    "src/ui/TimerUI.tsx": "1b00f69d35ee0e71c992ef0d799e3310f5c6b029327b3be1b351ae94812f5d46",
+    "src/ui/Today.tsx": "3b50b105c3fdfd7ecccf5cc05a1b3384752a89d134e34c7369609a96c40353fd",
+    "src/ui/model.ts": "10349e6a8bd69d3fe3e044a660745f5b0bfa9c38f76f810baaffe42ad399bfcd",
+    "src/ui/motion-21.css": "7e7071de27e60f5a34d34b26714ebfa6f8763af2d1aa5dcdc57a3f632e328601",
+    "src/ui/motion.ts": "70b6b942459dd80308505514855e941fb8c860c94a4ac7c4aadcf9a2443341e6",
+    "src/ui/phase2.css": "fa5d1f55be3e5f680eef0efef6ef3c13912bfdc4e0ea977f18d35bea17a1cefa",
+    "src/ui/service.ts": "dd92113014238c5b49a5efb861f4b0624deba23c286620e28db74151303ec348",
+    "src/ui/sitewide-motion.css": "4e517e56e035903623625ce9e4a67ec8769ddfcf0cc5df8a4d5aecde891abf0f",
+    "src/ui/styles.css": "c87b0c713ecfae9fd51a6577ca0a8c497363d9fa797ba92d91b1c69af5f2a2fd",
+    "src/ui/today-v2.css": "713caf7c54bd36a46a9a1888d9b55bfb90410ca2e3f7da6969bb278660fba715",
+    "package.json": "55c35510da28d2394a4e2e3819f741446e9d859127e00cf3c7f03325aab95109",
+    "package-lock.json": "c167fb85e96180b40f09ba86c7a40660ad7d03038fe707265b3aabf2710b3a8d",
+    "index.html": "4f14c3fe80d599ee80a9f3039fbaa74deb17ccd4d4b107e4346b99ac096b8ead",
+    "vite.config.ts": "3a869f6d69358c188491548c9a84cf5c5630b25fd852a2bf62c3678c27f97b94",
+    "tsconfig.json": "b93da925d603536cf50fbe2f0fd8177c6882e552a236c8b659a36fe3cc905d58",
+    "verified-media.ts": "8a9e240ac4770eaf042dcef7176a477ae5185773282bdf5a77536f5adfc389f1",
+    "public/favicon.svg": "f8ca151f4a0f6c6bb47186a9292c3478284ef1e306a731e50cc19f201e8569d3"
+  },
+  "harness": {
+    "tests/ui-flow.cjs": "3adc19f62cada845cef62e7393a6383c2b79cee58670b9ef1720ad77d9c3f5f0",
+    "tests/media-quality.py": "55a1b171bf35b79b2fd88346570413cde77824441596efadefbbf47dcaafa344",
+    "tests/core.browser.mjs": "7c8a4abff2806ae47eb2bbc06ccf6b80db1cf6fab9c23fd55ee94b5a04226988",
+    "tests/contrast-evaluate.py": "9118868e6099dfcf46c9f8d52fad70fe6b43896db10d1c11a8d703eaa5a22050",
+    "tests/tick-performance.mjs": "e696cd57369d3fa31d59fbae13d36f93d4e8e05963172e4796137eafaba88f35",
+    "tests/faults.spec.ts": "669937da1e0334f3c25c023d57033cf7eda001dba96f78cf825e5caa95efbd24",
+    "tests/mobile-clearance.mjs": "bde46c65dbaf9136a20330f066ea25c43f863b0996c726d9ef7776dcba74f4a4",
+    "tests/ui-readonly.cjs": "55eb24f2782d135b10712230a7c4044cd01cee0e3272b4ad14784b705ba54a88",
+    "tests/capture.mjs": "c5ddfb4edf4edcc092b40d8ebe4979fbd4b96b99d9aa2a0e2cb114d329bdfab6",
+    "tests/format.mjs": "8a2272e2ee39a7281a11e5098b8d448efed25b841d113cfe1d57b49d6c2a7fe1",
+    "tests/review-regressions.spec.ts": "2f6df2368af9280e60643759ab4cd6bfdd958fea148bdf15c84e3d36e00cb9a4",
+    "tests/media-playback.mjs": "f0a6f4b8a37df62cab943784cdddae798bfec6cf85f761d685ca5258f08ed539",
+    "tests/record.mjs": "a83f9cc8985f1250e5b4536bf85cc35a6e6a73b44ef6bf010788ca94005431c1",
+    "tests/visual-report.py": "263fd1ae41673b474d49dddb644caf6070a26bb58d851c2ba2afb22a4e66fdc0",
+    "tests/ui-baseline.cjs": "2cc63dfcaeac0f4a5371f3b77832daaff2ecfbe5d00425d2ab7388a8b25a605c",
+    "tests/acceptance.spec.ts": "b40217dd1a01f328fe74728a197a1cd3563cb341f7b1db42bee3b6c8c5b7fdd5",
+    "tests/baseline.mjs": "893a92172b022dc7ee8d2a0016026c19f19a8da9f0a447402fa7790115a026ec",
+    "tests/ui-visual.cjs": "f9a76a4c6b0c76e1261df0a3112ac254222bdd1daeac66d2242406acbe7d1a35",
+    "tests/ui-model.test.cjs": "88bb549654381f5f35603554392b34d3552b82d6f4ebb93e9b248aba22097ab1",
+    "tests/hardening.spec.ts": "b7b4ff820ece73b17b310803fe697d294b835a716d06d7b1f112cb470a9ee759",
+    "tests/contrast.mjs": "3c138bc30d5c675d69ff805a225422236fc52863b7ee427f51071430c3b88315",
+    "tests/ui-recovery.cjs": "227a18bc6983b5ffcb3f27d1a8f5d8789b12927d0a9170ae5c77d0c49f2357e2",
+    "tests/media-handler-unit.mjs": "58f93d61082f83ec4d82391d0cce1f85741ff1e70dcc064e9ffc335e3c65f107",
+    "tests/a11y.mjs": "81ad4ff19ccae5c97622a3b8702a17fcc991f87dae17fb6477e75ca4d5da3359",
+    "tests/ui-motion.cjs": "73d81397d68b2c641876b4bfa1991c2ad1644d1f799262c476c29afe1b93f1e9",
+    "playwright.config.ts": "e7b9919b8a21cd3422387f40a9ba5e9b987b7c9059a4821cdcd327398bc40fe0"
+  },
+  "evidence": {
+    "evidence/build-delivery.log": "ca18797effb198cedc3427730d4b1e3a37490689bacb7200f163cc2b746405a9",
+    "evidence/acceptance-delivery.log": "e5b43cefca93ed651bb5a715dc97871803f20f3af73ececfa01b2193bd062786",
+    "evidence/acceptance-results.json": "de38f46a7eee6d4eacea596ec8865ab4b14bf98d405d383a96995435896d142d",
+    "evidence/core-delivery.json": "185bf064f7b0509a532283ee05b5d41e7f23b35b05fda727df1423c8780f0224",
+    "evidence/core-delivery.log": "8325faac7f349da6a26cfe9f821684934c6a09eee90065f0c2ae5b4a5797d777",
+    "evidence/acceptance-reload.json": "5c3cf13de7d0bc879446a3655ee36d0dd7d98f972d2735c70c0d043840493d21",
+    "evidence/acceptance-multi-tab.json": "7482a975e8333706bd95cde36b8893190825436005f6178a2e00d4614a1d6118",
+    "evidence/acceptance-abnormal-recovery.json": "87cc05c2870b5e6560cca963a9343f3b1a2c338c20e6f792152929e4f63a7947",
+    "evidence/acceptance-lifecycle-indexeddb.json": "218aaf330d563d058a1f10c5e964f70c708040f8d2094623a59e1c2d437a75ed",
+    "evidence/acceptance-simulated-long-midnight.json": "4572f5c5a7e87d42f7ac0a65a137ecd666c2b77c52cca28b58d2b7b3fec64bd7",
+    "evidence/captures.json": "b53cec5f92b88aa0f32925f83d441b88d2a88c175ca46497297536c936674d14",
+    "evidence/a11y.json": "57e5a5d9acf971382297c37b1c1e8fc54596bd0c6ee0701857f8f6b4731e13a2",
+    "evidence/contrast-manual.json": "65089b3cd781a75f1ee0153968f819135553dc09c230106d3a1b778de1bdb249",
+    "evidence/contrast-capture.json": "0384f2373ad1fe6cf953ed0a96b7ca32710dbb55f223bd64f99d74d356245131",
+    "evidence/visual-geometry-comparison.json": "536988551c8a921d61a87e1a2319f2aa9449db1124e73a1a59e368ef258867d5",
+    "evidence/comparison-provenance.json": "7debe3ad01fcd425b6baea2b57bfb72ddd4813dc0d2f4187e8ea855ad24c7607",
+    "evidence/comparison-1440-light.png": "c776ec87112d305971e57fcabebd7a6da419cefeea2b33db1997414f230cfa85",
+    "evidence/comparison-390-dark.png": "f5fb9e26e5f1cbc57f38b26379b322a5759bf48af438b6fa0e54cba3ba85552b",
+    "evidence/mobile-clearance.json": "7256e1a9dc53ef6768ed67ae576b76ea8df23e20ace208361ba8fa3572b6aaf6",
+    "evidence/mobile-last-content.png": "ac56dc230a18411312987c311b61209230eca3495165f30c245340349d00b812",
+    "evidence/tick-performance.json": "b9ede4135342d8d63d397bfc9b9584e146305815b8e35f0018c6da1d77b2df8a",
+    "evidence/media-quality.json": "e7cdfd8eb154ebbf2cf395a5d142f9c4f687721d94548a90dac6c81186c582de",
+    "evidence/media-playback.json": "981b79ee867250679767259a66496ecce23e5960abb5495a3cf64beb5ed587b9",
+    "evidence/media-handler-unit.json": "3f49269a2b453c3d9fd184c41836ca567145e8b13abd1c6ac3026037b15b9d45",
+    "evidence/recording.json": "a7db0ee59d9ae64c46215ceab66917d20d06a8738aa6cba5c9ca8923edd535ed",
+    "evidence/video-contact-sheet.png": "bdd3f5e8a568b58c164264c7678f180948fd954c0e587e0f7c2831409e8883dd",
+    "evidence/review-verdict-post.json": "30fd6a59caa49a47bb2427d0056b0106c5bf34877002a121e9d5a39eeeabd9e0",
+    "evidence/review-verdict-post.md": "4206a9d2f6a3d1064a14b950d7956a2909940090a6db9e430009e07820b6e3a2",
+    "evidence/review-post-tests.json": "95ddd47146e584e497fc8fa4b6050ba4d8a153958aa11d70d43d758d3567f606",
+    "evidence/review-post-run.json": "a1a51da2b999654f4c48d331c78ef06bf849eed8427c501bdf2b25ebb999f754",
+    "evidence/review-regressions-red.log": "e9c793cba25ed992e3d9b9dfd40b96468d7dc4cb40e2b8a0838a12661c34f0de",
+    "evidence/review-regressions-green.log": "c06d941d678b37210528e0242b086d8ae9e5f60b93e649c871b3197d735569b3",
+    "evidence/source-post-review.json": "bb440976bbb2ea8e9377e1a4746217128a2ff481080f205cbcd24aa5f84ad7ce",
+    "evidence/independent-review-partial.json": "c5ce21717b3e666b31e63e07044d94a752f5ef8690233b6281a7590620a082e5",
+    "evidence/protection-final.json": "08c2064f2952d5905f52d1242c97861c38614f3b9642237581ae01316a720086",
+    "REPORT.md": "9da4dd1b3e3f7dfbd9119812808f510bc8c32f9698242ff8a7956fcb62cc4857",
+    "README.md": "17fe9df8cb004d722aa5c4f51ab4afdf4d66b738a5dbc800f20f6a91cd1e6401",
+    "STATUS.md": "edbf5a67774a1f25626d881b31d36cafe5f3d10951dddcd37ec756c2a2474142",
+    "recording/StudyFlow-3.0-timer-post-review.webm": "d0336eabe804e5fe9ceea52af391639c5de14f80e991372e573fa1d5f05b16ce",
+    "public/media/StudyFlow-3.0-timer.mp4": "769ef273a6832242746547c420ad47c7884bfa4de854c3a2df30450a38d7d21d",
+    "checkpoints/protection.json": "ba204c22c5e2cf4518ddca23f7e5c7c8d095ae1096fa113393d7ee53efdd484b"
+  },
+  "screenshots": [
+    {
+      "file": "evidence/3.0-1440-dark-ended.png",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "da60577d8cf3c2d88882d456bacd75c0b0e2cef1fa8583bd4f3cf1ea73a0b7b6"
+    },
+    {
+      "file": "evidence/3.0-1440-dark-idle-full.png",
+      "dimensions": [
+        1440,
+        1148
+      ],
+      "sha256": "3043719ba6fe25260d72836e9affac6e6108b8d76ed1478e6ef6f1ac9bd7072b"
+    },
+    {
+      "file": "evidence/3.0-1440-dark-idle.png",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "e9b4124d25542e65ed69c8e70f224e74fdef95dd1222a318dad8a01dd308fdb8"
+    },
+    {
+      "file": "evidence/3.0-1440-dark-paused.png",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "2c9bf0ff2b8ccef3b1ebb38921f7fd60e2dd778612892077c03487ba1855a9dc"
+    },
+    {
+      "file": "evidence/3.0-1440-dark-running-full.png",
+      "dimensions": [
+        1440,
+        1164
+      ],
+      "sha256": "f348001c4b57101a20b6fd6307caad8be04601c25ac645ad0bd4858c256f426b"
+    },
+    {
+      "file": "evidence/3.0-1440-dark-running.png",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "c22da17bef11ef397e158278b097765308809d034aac328a17558e55141abf98"
+    },
+    {
+      "file": "evidence/3.0-1440-light-ended.png",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "d2154c8bc3da8900ad234aa66a35b340c7323f56f83247d48c9dbd236002c3c9"
+    },
+    {
+      "file": "evidence/3.0-1440-light-idle-full.png",
+      "dimensions": [
+        1440,
+        1148
+      ],
+      "sha256": "b6e839c3be934b638437b9080269f1527cf5b00ce8c604ff258e0f9764ab2fa6"
+    },
+    {
+      "file": "evidence/3.0-1440-light-idle.png",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "a622031cbeb16196388ae35d2b071732430270c7597c85d66995f83ab5966a44"
+    },
+    {
+      "file": "evidence/3.0-1440-light-paused.png",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "e9f82b19fe5686c8bdc9d3a7cdc2151eacbb1adb2e75dc4f09ec3462b05f3170"
+    },
+    {
+      "file": "evidence/3.0-1440-light-running-full.png",
+      "dimensions": [
+        1440,
+        1164
+      ],
+      "sha256": "6397bb08b22040f47de9231df79063e9bdb6afee6967f3bb882f002e3563f84a"
+    },
+    {
+      "file": "evidence/3.0-1440-light-running.png",
+      "dimensions": [
+        1440,
+        900
+      ],
+      "sha256": "6c66ddb16d7ecbedd5d35d52d4712f332ffddb6733a119914c16d416113c2c34"
+    },
+    {
+      "file": "evidence/3.0-390-dark-ended.png",
+      "dimensions": [
+        390,
+        844
+      ],
+      "sha256": "9fea2840307afb2cc413cea65dcbd6e34a58ba5c442e2c929af8cdd35578c06b"
+    },
+    {
+      "file": "evidence/3.0-390-dark-idle-full.png",
+      "dimensions": [
+        390,
+        1531
+      ],
+      "sha256": "ff755f08400dd72c30664d35f749858b8adfee85a0cdde530459322134c7cf94"
+    },
+    {
+      "file": "evidence/3.0-390-dark-idle.png",
+      "dimensions": [
+        390,
+        844
+      ],
+      "sha256": "4b156c352712ea05cd39c41218966ef89663fd57c0861a7ce5aef5fbfefcbd72"
+    },
+    {
+      "file": "evidence/3.0-390-dark-paused.png",
+      "dimensions": [
+        390,
+        844
+      ],
+      "sha256": "56011ce3723390f69d514f9723c6e96b280e2d1845b321f1123798c750041ef7"
+    },
+    {
+      "file": "evidence/3.0-390-dark-running-full.png",
+      "dimensions": [
+        390,
+        1648
+      ],
+      "sha256": "4d382279ff557e426e994e35b0235d4d063e2eb0d0cb6fa763a91e1e85793a4d"
+    },
+    {
+      "file": "evidence/3.0-390-dark-running.png",
+      "dimensions": [
+        390,
+        844
+      ],
+      "sha256": "294d69fb6404758631dd981c69a570dcd608c21d0e2008448ce76787e89d7e69"
+    },
+    {
+      "file": "evidence/3.0-390-light-ended.png",
+      "dimensions": [
+        390,
+        844
+      ],
+      "sha256": "61a72e4466804bf3273ec61555d0fa0d28fd85bbe72e9e88b2540d79cb451c6e"
+    },
+    {
+      "file": "evidence/3.0-390-light-idle-full.png",
+      "dimensions": [
+        390,
+        1531
+      ],
+      "sha256": "593ead08bccdaafd17e3f2bb159b90ec9fab66f489c2af393d43348b4af72bc3"
+    },
+    {
+      "file": "evidence/3.0-390-light-idle.png",
+      "dimensions": [
+        390,
+        844
+      ],
+      "sha256": "1d61c370b543780ba791dbecf0f3354944a00ed2e9d0f0d263609485bd2a0b24"
+    },
+    {
+      "file": "evidence/3.0-390-light-paused.png",
+      "dimensions": [
+        390,
+        844
+      ],
+      "sha256": "3c5d302ab01b7e2f00467ea8fd8bec03fd00eacbe6031f0b022c7acd4ec1ee53"
+    },
+    {
+      "file": "evidence/3.0-390-light-running-full.png",
+      "dimensions": [
+        390,
+        1648
+      ],
+      "sha256": "60350b1c88972b341ea2d9ad86bc3f3039d1b02aad3d99d3eed6614911f735ee"
+    },
+    {
+      "file": "evidence/3.0-390-light-running.png",
+      "dimensions": [
+        390,
+        844
+      ],
+      "sha256": "5885e56e8c9f91e052b2f95d59e842b3de814f737a079984d67d7193c1775c04"
+    }
+  ],
+  "verified": {
+    "buildExitCode": 0,
+    "playwrightTestsPassed": 24,
+    "coreChromePassed": 20,
+    "independentScopedFindingIds": [
+      "P2-01",
+      "P2-02",
+      "P2-03"
+    ],
+    "independentRegressionReruns": 6,
+    "protectedFilesUnchanged": 1877,
+    "accessibilityScans": 8,
+    "accessibilityViolations": 0,
+    "accessibilityIncompleteRuleInstances": 8,
+    "contrastTextInstances": 188,
+    "contrastMinimum": 8.356793778227297,
+    "gradientContrastScope": "settled main card text instances only",
+    "mediaWidth": 1440,
+    "mediaHeight": 900,
+    "mediaDurationSeconds": 11.32,
+    "mediaDecodedFrames": 283,
+    "mediaMaxPtsDeltaSeconds": 0.0,
+    "browserPlaybackAndAccurateSeek": true,
+    "httpByteIdentityAndRangeChecks": true
+  },
+  "reviewRevisionNote": {
+    "originalReviewWasInterrupted": true,
+    "scopedReviewCompleted": true,
+    "changedPinnedFilesAfterScopedReview": [
+      "vite.config.ts"
+    ],
+    "changeReason": "Media-only exact endpoint added to Vite after review completed; client/core source unchanged; full build/24 browser/20 core gates rerun. Scoped independent verdict is preserved and not enlarged."
+  },
+  "knownScopeDeviation": {
+    "extraFile": "/Users/sunboming/.hermes/skills/scoped-frozen-review/SKILL.md",
+    "kind": "New generic skill saved by review subagent outside project boundary",
+    "userDataTouched": false,
+    "notRemovedWithoutUserPermission": true
+  },
+  "limits": [
+    "No physical sleep/lid-close/disk-exhaustion certification",
+    "Chrome viewport/touch emulation, not physical mobile or other engines",
+    "No stable60fps claim or whole-app WCAG approval",
+    "No long-term large-history capacity certification",
+    "No cross-browser/device sync or backup UI in phase2"
+  ]
+}
